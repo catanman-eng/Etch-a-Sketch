@@ -5,6 +5,7 @@ const colorPicker = document.getElementById("color-select")
 window.addEventListener("load", defaultGrid);
 
 function defaultGrid() {
+  
   makeGrid(16, 16);
 }
 
@@ -35,7 +36,6 @@ function changeColor(e) {
   const randB = Math.floor(Math.random() *256);
 
   e.target.style.backgroundColor = `rgb(${randR},${randG},${randB})`;
-  // e.target.style.backgroundColor = color;
 }
 
 reset.addEventListener("click", resetGrid);
@@ -45,7 +45,7 @@ function resetGrid() {
     cell.style.backgroundColor = "white";
   });
 
-  let size = prompt("Please Select New Grid Size (Maximum:100", "50");
+  let size = prompt("Please Select New Grid Size (Maximum: 100)", "50");
 
   while (grid.firstChild) grid.removeChild(grid.firstChild);
 
